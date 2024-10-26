@@ -4,7 +4,7 @@
 ## Overview
 This project automates the compilation of C++ code, takes screenshots of the outputs, and generates a DOCX file containing the results. It is designed to make it easy for MCA students at NIT Warangal (NITW) to run multiple C++ programs and document their outputs efficiently.
 
-##For My Friends At NITW
+## For My Friends at NITW
 "MCA life here is a battlefield, and in this warzone, consider me your divine ally, sent to save you precious time and keep your chariot charging forward."
 
 ## Features
@@ -18,13 +18,13 @@ Before using this project, ensure that your system meets the following requireme
 - **Operating System:** A Unix-like operating system (Linux or macOS).
 - **Python Version:** Python 3.6 or higher.
 - **C++ Compiler:** `g++` (GNU C++ Compiler).
-- **Screenshot Tool:** `scrot` (used for taking screenshots).
+- **Screenshot Tool:** `scrot` (Linux) or `screencapture` (macOS).
 - **Python Library:** `python-docx` (used for generating DOCX files).
 - **File Compression Utility:** `zip` (used for compressing files).
 
 ## Installation
 
-To install and set up this project, follow these steps:
+### Linux
 
 1. **Download the Project:**
    Use the following `curl` command to download the project directly from GitHub:
@@ -35,12 +35,28 @@ To install and set up this project, follow these steps:
    ```
 
 2. **Install Required Dependencies:**
-   Install the required packages using the commands below:
-
    ```bash
    sudo apt-get install g++ scrot zip -y
    pip3 install --user python-docx
    ```
+
+### macOS
+
+1. **Download the Project:**
+   Use the following `curl` command to download the project directly from GitHub:
+
+   ```bash
+   curl -L https://github.com/kartikrastogi1239/automation/archive/refs/heads/main.zip -o automation.zip
+   unzip automation.zip
+   ```
+
+2. **Install Required Dependencies using Homebrew:**
+   ```bash
+   brew install gcc zip
+   pip3 install --user python-docx
+   ```
+
+3. macOS comes with a built-in tool for screenshots, so there is no need to install `scrot`. The script uses the `screencapture` command instead.
 
 ## Usage
 
@@ -69,7 +85,7 @@ To install and set up this project, follow these steps:
 
 ## Troubleshooting
 If you encounter any issues or errors, consider the following:
-- Ensure all required packages and dependencies are installed (`g++`, `scrot`, `python-docx`, `zip`).
+- Ensure all required packages and dependencies are installed (`g++`, `scrot` (for Linux), `screencapture` (for macOS), `python-docx`, `zip`).
 - Verify that the correct permissions are set for the script (`chmod +x mkcpp.sh`).
 - Make sure the C++ source files are properly named and located in the expected directory.
 
@@ -77,9 +93,3 @@ If you encounter any issues or errors, consider the following:
 If you’d like to contribute to this project, feel free to submit a pull request or report issues on GitHub. All contributions are welcome!
 
 ### BUY ME A COFFEE IF THIS WORKED OUT AND SAVED YOU FROM CREATING DUMBASS DOC FILES, RENUMBERING SCREENSHOTS, AND WASTING YOUR TIME ON THIS CHAOTIC HUSTLE
-
-
-
-
-
-                                                 ##THANKYOU❤️
